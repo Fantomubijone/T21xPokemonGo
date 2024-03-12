@@ -1,0 +1,19 @@
+.itemBoxContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.itemBox {
+    display: inline-flex;
+    width: 10rem;
+    height: 10rem;
+    border: 4px solid black;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+    background-color: grey;
+}
+
+.itemBox:hover {
+    transform: translateY(-5px);
+}
