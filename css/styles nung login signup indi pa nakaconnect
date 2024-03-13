@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.image-placeholder {
+    margin-top: 40px;
+    height: 107px;
+    width: 20%;
+    background: url('img/T21.png') center/cover no-repeat;
+}
+
+.login-container {
+    margin-top: 30px;
+    max-width: 420px;
+    max-height: 500px;
+    padding: 100px;
+    padding-top: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.signup-container {
+    margin-top: 30px;
+    max-width: 550px;
+    max-height: 600px; /* Increased height to accommodate more fields */
+    padding: 100px;
+    padding-top: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h3 {
+    margin: 0 0 30px 0;
+}
+
+/* Style for input fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Style for login button */
+.login-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 50px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.login-btn:hover {
+    background-color:#e2012d;
+}
+
+.apple {
+    background-color: #000;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.google {
+    border:solid grey 1px;
+    color: black;
+    background-color: white;
+}
+
+.niantic {
+    background-color: #00a2ed;
+}
+
+p {
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
