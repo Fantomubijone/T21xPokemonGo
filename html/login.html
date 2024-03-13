@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log in Page</title>
-  </head>
-  <body></body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="image-placeholder"></div>
+    <div class="login-container">
+        <h3>Sign in with your Pokemon Go account</h3>
+        <form>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <br>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <br>
+            <button class="login-btn niantic">Login with Niantic Kids</button>
+            <p>Or sign up with:</p>
+            <button class="login-btn apple">Sign in with Apple</button>
+            <button class="login-btn facebook">Sign in with Facebook</button>
+            <button class="login-btn google">Sign in with Google</button>
+        </form>
+        <p>If you don't have a Pokemon Go Account, <a href="#">Make one today!</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
