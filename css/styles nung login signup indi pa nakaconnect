@@ -10,32 +10,24 @@ body {
 }
 
 .image-placeholder {
-    margin-top: 40px;
-    height: 107px;
-    width: 20%;
-    background: url('img/T21.png') center/cover no-repeat;
+    margin-top: 20px;
+    max-width: 250px; 
 }
 
-.login-container {
-    margin-top: 30px;
-    max-width: 420px;
-    max-height: 500px;
-    padding: 100px;
-    padding-top: 50px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
+.image-placeholder img {
+    width: 100%;
+    height: auto;
 }
 
+.login-container,
 .signup-container {
     margin-top: 30px;
-    max-width: 550px;
-    max-height: 600px; /* Increased height to accommodate more fields */
-    padding: 100px;
-    padding-top: 50px;
+    padding: 60px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+    width: 90%;
+    max-width: 420px;
 }
 
 h3 {
@@ -49,7 +41,7 @@ input {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    box-sizing: border-box;
     font-family: 'Montserrat', Arial, sans-serif;
 }
 
@@ -101,4 +93,38 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .login-container,
+    .signup-container {
+        padding: 40px; 
+        max-width: 80%; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login-container,
+    .signup-container {
+        padding: 30px; 
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .image-placeholder {
+        max-width: 150px; 
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .login-container,
+    .signup-container {
+        padding: 20px; 
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .image-placeholder {
+        max-width: 120px; 
+    }
 }
