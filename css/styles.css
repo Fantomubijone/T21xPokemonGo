@@ -1,19 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 .itemBoxContainer {
     display: flex;
     justify-content: center;
 }
 
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
 .itemBox {
+    position: relative;
     display: inline-flex;
-    width: 10rem;
-    height: 10rem;
+    width: 25rem;
+    height: 30rem;
     border: 4px solid black;
     margin-top: 1rem;
     margin-left: 1rem;
     transition: transform 0.3s ease;
-    background-color: grey;
+    background-color: #53b0cf;
+    border-radius: 8%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 
 .itemBox:hover {
     transform: translateY(-5px);
+}
+
+.itemBox img {
+    max-width: 100%;
+    height: 20%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 10%;
+    left: 22%;
+}
+
+.desc{
+    position: absolute;
+    top: 50%;
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+}
+
+.desc p {
+    position: relative;
+    left: 10%;
+    font-size: 20px;
+}
+
+#itemBox_1 img, #itemBox_2 img, #itemBox_3 img{
+    position: absolute;
+    top: 23%;
+    right: 5rem;
+    transform: translateY(-50%);
+}
+
+#itemBox_4 img, #itemBox_5 img, #itemBox_6 img{
+    width: 50%;
+    height: 33%;
+    position: absolute;
+    top: 23%;
+    right: 5rem;
+    transform: translateY(-50%);
 }
