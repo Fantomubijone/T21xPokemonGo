@@ -24,6 +24,14 @@
             object-fit: cover;
             margin-top: 70px;
         }
+        .centered_text {
+            position: absolute;
+            top: 55%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 80px;
+        }
         .btn {
             border-radius: 1000px;
             border: 0px;
@@ -35,26 +43,14 @@
         .btn.btn-primary:hover{
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
         }
-        /*.card {
+        .card {
             border-radius: 15px;
-        }*/
+            box-shadow: 0px 3px 13px -3px rgba(0, 0, 0, 0.20);
+            border-color: rgba(0, 0, 0, 0.1);
+        }
         .card:hover{
             box-shadow: 0px 15px 50px 1px rgba(0, 0, 0, 0.30);
             transition: all 0.3s ease-in-out;
-        }
-        .box_sa_taas_ng_card {
-            position: absolute;
-            /*top: 50%;*/
-            /*left: 50%;*/
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            max-width: 100%;
-            max-height: 100%;
-            height: auto;
-            top: calc(35%); 
-            left: calc(50% - 25px); 
-            justify-content: center;
-            align-items: center;
         }
         .red_label {
             background-color: #c40707;
@@ -192,11 +188,12 @@
     </style>
 </head>
 <body>
+    <header>
     <div class="header fixed-top">
         <nav class="navbar d-flex flex-wrapd-flex flex-wrap navbar bg-body-tertiary mx-5">
             <div class="container-fluid mx-5">
                 <a class="navbar-brand" href="#">
-                    <img src="../assets/LOGO/logo.png" alt="logo.png">
+                    <img src="assets/LOGO/logo.png" alt="logo.png">
                     Web Store
                 </a>
 
@@ -209,10 +206,12 @@
             </div>
         </nav>
     </div>
+    </header>
 
     <div class="main">
         <div class="promotion_image">
-            <img src="../assets/LOGO/image.png" class="img-fluid">
+            <img src="assets/LOGO/image.png" class="img-fluid">
+            <div class="centered_text">21% discount for<br>your first Web Store purchase on Exclusive<br>Pokemon GO X T21<br>EVENT ITEMS!</div>
         </div>
 
         <div class="container">
@@ -221,7 +220,7 @@
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <div class="card">
                     <div>
-                        <img src="../assets/BOXES/red_box1.png" class="card-img-top">
+                        <img src="assets/BOXES/red_box1.png" class="card-img-top">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Event Premium Box</h5>
@@ -236,7 +235,7 @@
             <div class="col-sm-6">
                 <div class="card">
                     <div>
-                        <img src="../assets/BOXES/red_box2.png" class="card-img-top">
+                        <img src="assets/BOXES/red_box2.png" class="card-img-top">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Event Regular Box</h5>
@@ -256,7 +255,7 @@
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 <div class="col">
                   <div class="card">
-                    <img src="../../assets/POKECOINS/C1.png" class="card-img-top" alt="...">
+                    <img src="assets/POKECOINS/C1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title mt-2">600 PokéCoins</h5>
                         <div class="container red_label mt-2">
@@ -269,7 +268,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="../assets/POKECOINS/C2.png" class="card-img-top" alt="...">
+                    <img src="assets/POKECOINS/C2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title mt-2">1,300 PokéCoins</h5>
                             <div class="container red_label mt-2">
@@ -282,7 +281,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="../assets/POKECOINS/C3.png" class="card-img-top" alt="...">
+                    <img src="assets/POKECOINS/C3.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title mt-2">2,700 PokéCoins</h5>
                             <div class="container red_label mt-2">
@@ -295,7 +294,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="../assets/POKECOINS/C4.png" class="card-img-top" alt="...">
+                    <img src="assets/POKECOINS/C4.png" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title mt-2">5,600 PokéCoins</h5>
                             <div class="container red_label mt-2">
@@ -308,7 +307,7 @@
                 </div>
                 <div class="col">
                     <div class="card mb-4">
-                      <img src="../assets/POKECOINS/C5.png" class="card-img-top" alt="...">
+                      <img src="assets/POKECOINS/C5.png" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title mt-2">15,500 PokéCoins</h5>
                             <div class="container red_label mt-2">
@@ -325,7 +324,7 @@
         <div class="container-fluid download mt-5 mb-5">
             <div class="download_both">
             <div class="container download_1">
-                <img src="../assets/LOGO/logo-original.png">
+                <img src="assets/LOGO/logo-original.png">
             </div>
             <div class="container download_2">
                 <div id="tagline">
@@ -333,9 +332,9 @@
                     <h3>Download Today</h3>
                 </div>
                 <div class="container gap-2 download_icons mt-4">
-                    <a href="https://apps.apple.com/vc/app/pok%C3%A9mon-go/id1094591345"><img src="../assets/LOGO/app-store.png"></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo"><img src="../assets/LOGO/google-play.png"></a>
-                    <a href="https://galaxystore.samsung.com/detail/com.nianticlabs.pokemongo.ares"><img src="../assets/LOGO/galaxy-store.png"></a>
+                    <a href="https://apps.apple.com/vc/app/pok%C3%A9mon-go/id1094591345"><img src="assets/LOGO/app-store.png"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo"><img src="assets/LOGO/google-play.png"></a>
+                    <a href="https://galaxystore.samsung.com/detail/com.nianticlabs.pokemongo.ares"><img src="assets/LOGO/galaxy-store.png"></a>
                 </div>
             </div>
             </div>
@@ -360,13 +359,13 @@
                         </ul>
                     </div>
                     <div class="footer_logo">
-                        <a href="https://nianticlabs.com/"><img src="../assets/LOGO/footer-logo.png"></a>
+                        <a href="https://nianticlabs.com/"><img src="assets/LOGO/footer-logo.png"></a>
                     </div>
                     <div class="container gap-5 social_links mt-4 mb-5">
-                        <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg"><img src="../assets/LOGO/youtube.png"></a>
-                        <a href="https://www.facebook.com/PokemonGO/"><img src="../assets/LOGO/facebook.png"></a>
-                        <a href="https://www.instagram.com/pokemongoapp/"><img src="../assets/LOGO/instagram.png"></a>
-                        <a href="https://www.tiktok.com/@pokemongo"><img src="../assets/LOGO/tik-tok.png"></a>
+                        <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg"><img src="assets/LOGO/youtube.png"></a>
+                        <a href="https://www.facebook.com/PokemonGO/"><img src="assets/LOGO/facebook.png"></a>
+                        <a href="https://www.instagram.com/pokemongoapp/"><img src="assets/LOGO/instagram.png"></a>
+                        <a href="https://www.tiktok.com/@pokemongo"><img src="assets/LOGO/tik-tok.png"></a>
                     </div>
                     <div class="container gap-5 terms mb-5">
                         <a href="https://nianticlabs.com/terms">Terms of Service</a>
