@@ -3,61 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Poke Coins</title>
 </head>
 <body>
-    <div class="itemBoxContainer" >
-        <div class="itemBox" id="itemBox_1">
-            <img src="../assets/pokeball_20.png" alt="">
-            <div class="desc">
-                <h3>20 Pokeball</h3>
-                <p>Price</p>
-                <button>Buy</button>
+    <div class="header fixed-top">
+        <nav class="navbar d-flex flex-wrap navbar bg-body-tertiary mx-5">
+            <div class="container-fluid mx-5">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/logo.png" alt="logo.png">
+                    Web Store
+                </a>
+
+                <div class="d-flex flex-wrap">
+                    <button type="button" class="btn btn-primary me-3 px-4 py-3">Home</button>
+                    <button type="button" class="btn btn-primary me-3 px-4 py-3">Store</button>
+                    <button type="button" class="btn btn-primary me-3 px-4 py-3">Sign Up</button>
+                    <button type="button" class="btn btn-primary px-4 py-3">Log In</button>
+                </div>
             </div>
-        </div>
-        <div class="itemBox" id="itemBox_2">
-            <img src="../assets/pokeball_100.png" alt="">
-            <div class="desc">
-                <h3>100 Pokeball</h3>
-                <p>Price</p>
-                <button>Buy</button>
-            </div>
-        </div>
-        <div class="itemBox" id="itemBox_3">
-            <img src="../assets/pokeball_200.png" alt="">
-            <div class="desc">
-                <h3>200 Pokeball</h3>
-                <p>Price</p>
-                <button>Buy</button>
-            </div>
-        </div>
+        </nav>
     </div>
     <div class="itemBoxContainer">
-        <div class="itemBox" id="itemBox_4">
-            <img src="../assets/remote_raid_pass_1.png" alt="">
-            <div class="desc">
-                <h3>1 Remote Raid Pass</h3>
-                <p>Price</p>
-                <button>Buy</button>
-            </div>
-        </div>
-        <div class="itemBox" id="itemBox_5">
-            <img src="../assets/maxrevive_6.png" alt="">
-            <div class="desc">
-                <h3>6 Max revive</h3>
-                <p>Price</p>
-                <button>Buy</button>
-            </div>
-        </div>
-        <div class="itemBox" id="itemBox_6">
-            <img src="../assets/luckyegg_8.png" alt="">
-            <div class="desc">
-                <h3>8 Lucky egg</h3>
-                <p>Price</p>
-                <button>Buy</button>
-            </div>
+        <div class="container">
+            <h1 class="container mb-4 mt-5">PokéCoins</h1>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                    <img id="pokeball_20" src="assets/pokeball_20.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">20 PokéBalls</h5>
+                        <div class="container red_label mt-2">
+                            <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                        </div>
+                        <p class="card-text mt-4 mb-4">₱149.00</p>
+                        <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img id="pokeball_100" src="assets/pokeball_100.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title mt-2">100 PokéBalls</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">100 WEB STORE BONUS COINS</a>
+                            </div>
+                        <p class="card-text mt-4 mb-4">₱289.00</p>
+                        <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img id="pokeball_200" src="assets/pokeball_200.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">200 PokéBalls</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">200 WEB STORE BONUS COINS</a>
+                            </div>
+                        <p class="card-text mt-4 mb-4">₱589.00</p>
+                        <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img id="EggIncubator" src="assets/EggIncubator.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 EggIncubator</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">400 WEB STORE BONUS COINS</a>
+                            </div>
+                        <p class="card-text mt-4 mb-4">₱1,169.00</p>
+                        <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col">
+                    <div class="card mb-4">
+                        <img id="EggIncSuper" src="assets/EggIncubatorSuper.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 EggIncubatorSuper</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">1000 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱2,950.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img id="MaxRev_6" src="assets/maxrevive_6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">6 MaxRevive</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="MaxPotion" src="assets/maxpotion_10.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">10 MaxRevive</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="Incense1" src="assets/Incense_1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Incense</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="Incense8" src="assets/Incense_8.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">8 Incense</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="luckyegg1" src="assets/luckyegg_1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 LukcyEgg</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="luckyegg8" src="assets/luckyegg_8.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">8 LukcyEgg</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="luremod" src="assets/lure_module.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Lure Module</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="luremod_8" src="assets/lure_module_8.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">8 Lure Module</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="magneticmod" src="assets/magnetic_module.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Magnetic Module</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="maxpotion10" src="assets/maxpotion_10.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">10 Max Potion</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="mossymod" src="assets/mossy_module.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Mossy Module</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="poff" src="assets/poffin.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Poffin</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="PBP1" src="assets/premium_bp_1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Premium BP</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="PBP3" src="assets/premium_bp_3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">3 Premium BP</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="rainymod" src="assets/rainy_module.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Rainy Module</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="RRP1" src="assets/remote_raid_pass_1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Remote Raid Pass</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="RRP3" src="assets/remote_raid_pass_3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">3 Remote Raid Pass</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="RR" src="assets/rocket_radar.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Rocket Radar</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="SP1" src="assets/starpiece_1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">1 Star Piece</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img id="SP8" src="assets/starpiece_8.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title mt-2">8 Star Piece</h5>
+                            <div class="container red_label mt-2">
+                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                            </div>
+                            <p class="card-text mt-4 mb-4">₱149.00</p>
+                            <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                        <li class="mb-4"><a href="https://pokemongolive.com/">Pokémon GO Live</a></li>
+                        <li class="mb-4"><a href="https://pokemongolive.com/leaderboard">Leaderboard</a></li>
+                        <li class="mb-4"><a href="https://pokemongolive.com/events">Events</a></li>
+                        <li class="mb-4"><a href="https://pokemongolive.com/news">News</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li class="mb-4"><a href="https://store.pokemongolive.com/support">Support</a></li>
+                        <li class="mb-4"><a href="https://rewards.nianticlabs.com/pokemongo">Offer Redemption</a></li>
+                        <li class="mb-4"><a href="https://pokemongolive.com/community-day/map">Community Day Map</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <a href="https://nianticlabs.com/"><img src="../assets/LOGO/footer-logo.png"></a>
+                </div>
+                <div class="col">
+                    <div class="social_links mt-4 mb-5">
+                        <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg"><img src="../assets/LOGO/youtube.png"></a>
+                        <a href="https://www.facebook.com/PokemonGO/"><img src="../assets/LOGO/facebook.png"></a>
+                        <a href="https://www.instagram.com/pokemongoapp/"><img src="../assets/LOGO/instagram.png"></a>
+                        <a href="https://www.tiktok.com/@pokemongo"><img src="../assets/LOGO/tik-tok.png"></a>
+                    </div>
+                    <div class="terms">
+                        <a href="https://nianticlabs.com/terms">Terms of Service</a>
+                        <a href="https://nianticlabs.com/privacy">Privacy Policy</a>
+                        <a href="https://nianticlabs.com/copyright">Copyright Policy</a>
+                        <a href="https://nianticlabs.com/guidelines">Player Guidelines</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>Pokémon GO is playable in English, French, German, Italian, Russian, Japanese, Spanish, Traditional Chinese, Korean, Thai, Brazillian<br>
+                        Portuguese, Turkish, and Indonesian.</p>
+                    <p>©2023 Niantic, Inc. ©2023 Pokémon. ©1995–2023 Nintendo / Creatures Inc. / GAME FREAK inc. Pokémon and Pokémon character<br>
+                        names are trademarks of Nintendo. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App<br>
+                        Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC. During gameplay, please<br>
+                        be aware of your surroundings and play safely.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
