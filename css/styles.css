@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-.itemBoxContainer {
-    display: flex;
-    justify-content: center;
+
+.header, .navbar {
+    background-color: #ffffff !important;
 }
 
 .montserrat {
@@ -11,81 +11,225 @@
     font-style: normal;
 }
 
-.itemBox {
-    position: relative;
-    display: inline-flex;
-    width: 25rem;
-    height: 30rem;
-    border: 1px solid lightgray;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    transition: transform 0.3s ease;
-    background-color: #DAEBE9;
-    border-radius: 8%;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+
+.btn {
+    border-radius: 1000px;
+    border: 0px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+}
+.btn.btn-primary:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
 }
 
-.itemBox:hover {
-    transform: translateY(-5px);
+.card:hover{
+    box-shadow: 0px 15px 50px 1px rgba(0, 0, 0, 0.30);
+    transition: all 0.3s ease-in-out;
 }
 
-.itemBox img {
-    max-width: 100%;
-    height: 20%;
-    display: block;
-    margin: auto;
+.red_label {
+    background-color: #c40707;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#bonus_coins {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+
+.footer{
+    background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+    padding: 50px 0;
+    height: fit-content;
+}
+.footer-col{
+    width: 20%;
+}
+.footer-col a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer-col a:hover {
+    text-decoration: underline;
+}
+ul{
+    list-style: none;
+}      
+.footer_logo {
     position: absolute;
-    top: 10%;
-    left: 22%;
+    right: 0;
+    margin-right: 100px;
+}
+.footer_logo img {
+    height: 60.96px;
+    width: 184px;
+}  
+.social_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social_links img {
+    width: 25px;
+    height: 25px;
+}
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+.terms a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+.terms a:hover {
+    text-decoration: underline;
+}
+.text {
+    text-align: center;
+}
+.text p{
+    color: #ffffff;
+    font-size: 14px;
 }
 
-.desc{
-    position: absolute;
-    top: 50%;
-    background-color: white;
-    width: 100%;
-    height: 50%;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    font-family: "Montserrat", sans-serif;
-}
-
-.desc h3{
-    position: relative;
-    top: 5%;
-    left: 5%;
-}
-
-.desc p {
-    position: relative;
-    left: 10%;
-    font-size: 20px;
-}
-
-#itemBox_1 img, #itemBox_2 img, #itemBox_3 img{
-    position: absolute;
-    top: 23%;
-    right: 5rem;
-    transform: translateY(-50%);
-}
-
-#itemBox_4 img, #itemBox_5 img, #itemBox_6 img{
+#pokeball_20{
     width: 50%;
-    height: 33%;
-    position: absolute;
-    top: 23%;
-    right: 5rem;
-    transform: translateY(-50%);
 }
 
-.desc button{
-    width: 40%;
-    height: 20%;
-    border-radius: 2rem;
-    position: relative;
-    left: 1rem;
-    background-image: linear-gradient(to right, #3f5efb, #46fccf);
-    color: white;
-    border: none;
-    cursor: pointer;
+#pokeball_100{
+    width: 56%;
+}
+
+#pokeball_200{
+    width: 50%;
+}
+
+#EggIncubator{
+    width: 35%;
+}
+
+#EggIncSuper{
+    width: 35%;
+}
+
+#MaxRev_6{
+    width: 88%;
+}
+
+#MaxPotion{
+    width: 60%;
+}
+
+#Incense1{
+    width: 69%;
+}
+
+#Incense8{
+    width: 69%;
+}
+
+#luckyegg1{
+    width: 57%;
+}
+
+#Incense8{
+    width: 69%;
+}
+
+#luckyegg8{
+    width: 67%;
+}
+
+#luremod{
+    width: 76%;
+}
+
+#luremod_8{
+    width: 69%;
+}
+
+#magneticmod{
+    width: 93%;
+}
+
+#maxpotion10{
+    width: 65%;
+}
+
+#mossymod{
+    width: 88%;
+}
+
+#poff{
+    width: 80%;
+}
+
+#PBP1{
+    width: 96%;
+}
+
+#PBP3{
+    width: 89%;
+}
+
+#rainymod{
+    width: 92%;
+}
+
+#RRP1{
+    width: 90%;
+}
+
+#RRP3{
+    width: 90%;
+    height: 11.6rem;
+}
+
+#RR{
+    width: 11.3rem;
+}
+
+#SP1{
+    width: 70%;
+    height: 11.5rem;
+}
+
+#SP8{
+    width: 80%;
+}
+
+@media (max-width: 767px) {
+    .footer-col {
+        width: 25%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .footer_logo {
+        margin-right: 350px;
+    }
+    .promotion_image {
+        height: 1080px;
+    }
 }
