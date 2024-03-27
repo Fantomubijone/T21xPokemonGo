@@ -402,15 +402,14 @@
         </footer>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $(window).scroll(function() {     
-        var scroll = $(window).scrollTop();
-        if (scroll > 0) {
-            $(".header").addClass("active");
-        } else {
-            $(".header").removeClass("active");
-        }
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (scrollY > 0) {
+                header.classList.add('active');
+            } else {
+                header.classList.remove('active');
+            }
         });
     </script>
 </body>
