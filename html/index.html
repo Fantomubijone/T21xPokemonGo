@@ -16,38 +16,13 @@
             box-shadow: 0px 4px 11px -1px rgba(0, 0, 0, 0.25);
         }
         .promotion_image {
-            position: relative;
-            width: 100%;
-            height: 900px; 
-            margin-bottom: 140px;
-            overflow: hidden;
             margin-top: 70px;
+            border: none;
         }
-        .promotion_image img {
-            width: 100%;
-            /*height: 100%;*/
-            height: auto;
-            object-fit: contain;
-        }
-        .snorlax {
-            position: absolute;
-            top: 50%;
-            right: 150px;
-            transform: translate(0, -50%);
-            z-index: 1; 
-            width: 600px;
-            height: 600px;
-        }
-        .snorlax img {
-            position: absolute;
-        }
-        .centered_text {
-            position: absolute;
-            top: 50%;
-            left: 40%;
-            transform: translate(-50%, -50%);
-            color: #ffffff;
-            font-size: 80px;
+        .promotion_image .card {
+            border-radius: 0 ;
+            box-shadow: none ;
+            border: none ;
         }
         .btn, .navbtn {
             border-radius: 1000px;
@@ -57,7 +32,7 @@
             font-size: 16px;
             background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
         }
-        .btn.btn-primary:hover{
+        .btn.btn-primary:hover, .navbtn.btn-primary:hover {
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
         }
         .offcanvas-body {
@@ -73,7 +48,6 @@
             justify-content: center; 
             text-align: center; 
         }
-
         .card {
             border-radius: 15px;
             box-shadow: 0px 3px 13px -3px rgba(0, 0, 0, 0.20);
@@ -210,27 +184,18 @@
             border: none !important;
             box-shadow: none !important;
         }
-        
 
         @media(max-width: 574px){
         .footer-col {
             width: 100%;
         }
+        .zarks {
+            margin-right: -100px;
+        }
         }
         @media(min-width:500px) {
-            .card {
+        .card {
             border-radius: 23px;
-        }
-        .centered_text {
-            top: 30%;
-            left: 37%;
-            font-size: 20px;
-        }
-        .snorlax {
-            top: 30%;
-            right: 50px;
-            width: 100px;
-            height: 100px;
         }
         }
         @media (min-width: 768px) {
@@ -241,40 +206,15 @@
         .card {
             border-radius: 12px;
         }
-        .centered_text {
-            top: 30%;
-            left: 37%;
-            font-size: 30px;
-        }
-        .snorlax {
-            top: 30%;
-            right: 50px;
-            width: 200px;
-            height: 200px;
-        }
         }
 
         @media (min-width: 991px) {
-        .centered_text {
-            top: 35%;
-            left: 37%;
-            font-size: 25px;
-        }
-        .snorlax {
-            top: 35%;
-            right: 50px;
-            width: 200px;
-            height: 200px;
-        }
         }
 
         @media (max-width:990px) {
         .navbar img{
             width: 110px;
             height: 32px;
-        }
-        .promotion_image {
-            margin-top: 0px;
         }
         }
 
@@ -290,40 +230,12 @@
         }
         }   
 
-        @media (min-width: 1200px) {
-        .centered_text {
-            top: 40%;
-            left: 35%;
-            font-size: 55px;
-
-        }
-        .snorlax {
-            top: 40%;
-            right: 50px;
-            width: 400px;
-            height: 400px;
-        }
-        }
-
         @media(min-width: 1600px){
         .footer_logo {
             margin-right: 350px;
         }
         .card {
             border-radius: 15px;
-        }
-        .promotion_image {
-            height: 1080px;
-        }
-        .centered_text {
-            top: 50%;
-            left: 35%;
-            font-size: 70px;
-        }
-            .snorlax {
-            top: 50%;
-            width: 600px;
-            height: 600px;
         }
         }
     </style>
@@ -345,7 +257,7 @@
                     <button type="button" class="btn btn-primary px-4 py-3">Log In</button>
                 </div>
 
-                <!--hamburger icon-->
+                <!--hamburger icon aka zarks-->
                 <button class="navbar-toggler zarks" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -372,10 +284,42 @@
     </header>
 
     <div class="main">
-        <div class="promotion_image mb-1">
+
+        <!--div class="promotion_image mb-1">
             <img src="assets/LOGO/image.png" class="img-fluid promo">
             <div class="centered_text">21% discount for<br>your first Web Store purchase<br>on Exclusive Pokemon GO X T21<br>EVENT ITEMS!</div>
             <div class="snorlax"><img src="assets/LOGO/snorlax.png"></div>
+        </div-->
+
+        <!--div class="card text-bg-dark promotion_image">
+            <img src="assets/LOGO/image.png" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                    <h1 class="card-text">
+                        21% discount for your first Web Store purchase on Exclusive Pokemon GO X T21 EVENT ITEMS!
+                    </h1>
+                </div>
+        </div-->
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                    <img src="assets/LOGO/image.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="assets/LOGO/image2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/LOGO/image3.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
         </div>
 
         <div class="container">
