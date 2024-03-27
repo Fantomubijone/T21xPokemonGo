@@ -20,16 +20,30 @@
             width: 100%;
             height: 900px; 
             margin-bottom: 140px;
+            overflow: hidden;
         }
         .promotion_image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            margin-top: 70px;
+            /*height: 100%;*/
+            height: auto;
+            object-fit: contain;
+            /*margin-top: 70px;*/
+        }
+        .snorlax {
+            position: absolute;
+            top: 50%;
+            right: 150px;
+            transform: translate(0, -50%);
+            z-index: 1; 
+            width: 600px;
+            height: 600px;
+        }
+        .snorlax img {
+            position: absolute;
         }
         .centered_text {
             position: absolute;
-            top: 55%;
+            top: 50%;
             left: 40%;
             transform: translate(-50%, -50%);
             color: #ffffff;
@@ -169,12 +183,6 @@
             font-size: 14px;
         }
 
-        @media(max-width: 767px){
-        .footer-col {
-            width: 25%;
-            margin-bottom: 30px;
-        }
-        }
         @media(max-width: 574px){
         .footer-col {
             width: 100%;
@@ -184,12 +192,57 @@
             .card {
             border-radius: 23px;
         }
+        .centered_text {
+            top: 30%;
+            left: 37%;
+            font-size: 20px;
         }
-        @media(min-width:780px) {
-            .card {
+            .snorlax {
+            top: 30%;
+            right: 50px;
+            width: 100px;
+            height: 100px;
+        }
+        }
+
+        @media (min-width: 768px) {
+        .footer-col {
+            width: 25%;
+            margin-bottom: 30px;
+        }
+        .card {
             border-radius: 12px;
         }
         }
+
+        @media (min-width: 992px) {
+        .centered_text {
+            top: 35%;
+            left: 37%;
+            font-size: 25px;
+        }
+        .snorlax {
+            top: 35%;
+            right: 50px;
+            width: 200px;
+            height: 200px;
+        }
+        }
+
+        @media (min-width: 1200px) {
+        .centered_text {
+            top: 40%;
+            left: 37%;
+            font-size: 40px;
+            }
+            .snorlax {
+            top: 40%;
+            right: 50px;
+            width: 300px;
+            height: 300px;
+            }
+        }
+
         @media(min-width: 1600px){
         .footer_logo {
             margin-right: 350px;
@@ -200,6 +253,16 @@
         .promotion_image {
             height: 1080px;
         }
+        .centered_text {
+            top: 50%;
+            left: 35%;
+            font-size: 70px;
+            }
+            .snorlax {
+            top: 50%;
+            width: 600px;
+            height: 600px;
+            }
         }
     </style>
 </head>
@@ -225,13 +288,14 @@
     </header>
 
     <div class="main">
-        <div class="promotion_image">
+        <div class="promotion_image mb-4">
             <img src="assets/LOGO/image.png" class="img-fluid">
-            <div class="centered_text">21% discount for<br>your first Web Store purchase on Exclusive<br>Pokemon GO X T21<br>EVENT ITEMS!</div>
+            <div class="centered_text">21% discount for<br>your first Web Store purchase<br>on Exclusive Pokemon GO X T21<br>EVENT ITEMS!</div>
+            <div class="snorlax"><img src="assets/LOGO/snorlax.png"></div>
         </div>
 
         <div class="container">
-            <h1 class="container mb-4 mt-5">Item Boxes</h1>
+            <h1 class="container mb-4 mt-4">Item Boxes</h1>
             <div class="row">
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <div class="card">
