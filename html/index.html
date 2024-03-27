@@ -21,13 +21,13 @@
             height: 900px; 
             margin-bottom: 140px;
             overflow: hidden;
+            margin-top: 70px;
         }
         .promotion_image img {
             width: 100%;
             /*height: 100%;*/
             height: auto;
             object-fit: contain;
-            /*margin-top: 70px;*/
         }
         .snorlax {
             position: absolute;
@@ -76,10 +76,11 @@
             border-radius: 5px;
             text-align: center;
         }
-        #bonus_coins {
+        .bonus_coins {
             font-weight: 700;
             font-size: 0.875rem;
             color: #ffffff;
+            text-decoration: none;
         }
         .download {
             background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
@@ -213,9 +214,20 @@
         .card {
             border-radius: 12px;
         }
+        .centered_text {
+            top: 30%;
+            left: 37%;
+            font-size: 30px;
+        }
+            .snorlax {
+            top: 30%;
+            right: 50px;
+            width: 200px;
+            height: 200px;
+        }
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: 991px) {
         .centered_text {
             top: 35%;
             left: 37%;
@@ -229,17 +241,31 @@
         }
         }
 
+        @media (max-width:990px) {
+            .navbar img{
+            width: 110px;
+            height: 32px;
+        }
+        .navbar button.btn {
+            display: none;
+        }
+        .promotion_image {
+            margin-top: 0px;
+        }
+        }
+
         @media (min-width: 1200px) {
         .centered_text {
             top: 40%;
-            left: 37%;
-            font-size: 40px;
+            left: 35%;
+            font-size: 55px;
+
             }
             .snorlax {
             top: 40%;
             right: 50px;
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
             }
         }
 
@@ -277,18 +303,10 @@
                 </a>
 
                 <div class="d-flex flex-wrapd-flex flex-wrap">
-<a href="index.html" class="btn btn-primary me-3 px-4 py-3">
-								Home
-							</a>
-							<a href="store.html" class="btn btn-primary me-3 px-4 py-3">
-								Store
-							</a>
-							<a href="signup.html" class="btn btn-primary me-3 px-4 py-3">
-								Sign Up
-							</a>
-							<a href="login.html" class="btn btn-primary px-4 py-3">
-								Log In
-							</a>
+                    <button type="button" class="btn btn-primary me-3 px-4 py-3">Home</button>
+                    <button type="button" class="btn btn-primary me-3 px-4 py-3">Store</button>
+                    <button type="button" class="btn btn-primary me-3 px-4 py-3">Sign Up</button>
+                    <button type="button" class="btn btn-primary px-4 py-3">Log In</button>
                 </div>
             </div>
         </nav>
@@ -296,8 +314,8 @@
     </header>
 
     <div class="main">
-        <div class="promotion_image mb-4">
-            <img src="assets/LOGO/image.png" class="img-fluid">
+        <div class="promotion_image mb-1">
+            <img src="assets/LOGO/image.png" class="img-fluid promo">
             <div class="centered_text">21% discount for<br>your first Web Store purchase<br>on Exclusive Pokemon GO X T21<br>EVENT ITEMS!</div>
             <div class="snorlax"><img src="assets/LOGO/snorlax.png"></div>
         </div>
@@ -313,7 +331,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Event Premium Box</h5>
                         <div class="col-4 red_label mt-2">
-                            <a id="bonus_coins">LIMITED-TIME ONLY</a>
+                            <a class="bonus_coins">LIMITED-TIME ONLY</a>
                         </div>
                         <p class="card-text mt-4 mb-4">₱350.00</p>
                         <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
@@ -328,7 +346,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Event Regular Box</h5>
                         <div class="col-4 red_label mt-2">
-                            <a id="bonus_coins">LIMITED-TIME ONLY</a>
+                            <a class="bonus_coins">LIMITED-TIME ONLY</a>
                         </div>
                         <p class="card-text mt-4 mb-4">₱250.00</p>
                         <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
@@ -347,7 +365,7 @@
                         <div class="card-body">
                         <h5 class="card-title mt-2">600 PokéCoins</h5>
                             <div class="container red_label mt-2">
-                                <a id="bonus_coins">50 WEB STORE BONUS COINS</a>
+                                <a class="bonus_coins">50 WEB STORE BONUS COINS</a>
                             </div>
                         <p class="card-text mt-4 mb-4">₱149.00</p>
                         <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
@@ -360,7 +378,7 @@
                         <div class="card-body">
                         <h5 class="card-title mt-2">1,300 PokéCoins</h5>
                                 <div class="container red_label mt-2">
-                                    <a id="bonus_coins">100 WEB STORE BONUS COINS</a>
+                                    <a class="bonus_coins">100 WEB STORE BONUS COINS</a>
                                 </div>
                         <p class="card-text mt-4 mb-4">₱289.00</p>
                         <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
@@ -373,7 +391,7 @@
                         <div class="card-body">
                         <h5 class="card-title mt-2">2,700 PokéCoins</h5>
                                 <div class="container red_label mt-2">
-                                    <a id="bonus_coins">200 WEB STORE BONUS COINS</a>
+                                    <a class="bonus_coins">200 WEB STORE BONUS COINS</a>
                                 </div>
                         <p class="card-text mt-4 mb-4">₱589.00</p>
                         <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
@@ -386,7 +404,7 @@
                         <div class="card-body">
                         <h5 class="card-title mt-2">5,600 PokéCoins</h5>
                                 <div class="container red_label mt-2">
-                                    <a id="bonus_coins">400 WEB STORE BONUS COINS</a>
+                                    <a class="bonus_coins">400 WEB STORE BONUS COINS</a>
                                 </div>
                         <p class="card-text mt-4 mb-4">₱1,169.00</p>
                         <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
@@ -399,7 +417,7 @@
                         <div class="card-body">
                             <h5 class="card-title mt-2">15,500 PokéCoins</h5>
                             <div class="container red_label mt-2">
-                                <a id="bonus_coins">1000 WEB STORE BONUS COINS</a>
+                                <a class="bonus_coins">1000 WEB STORE BONUS COINS</a>
                             </div>
                             <p class="card-text mt-4 mb-4">₱2,950.00</p>
                             <button type="button" class="btn btn-primary px-5 py-2">Buy</button>
