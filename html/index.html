@@ -114,6 +114,8 @@
         }
         .footer-col{
             width: 20%;
+            display: flex;
+            
         }
         .footer-col a {
             color: #ffffff;
@@ -190,6 +192,9 @@
         .zarks {
             margin-right: -100px;
         }
+        .footer-col {
+            margin-top: 100px;
+        }
         }
 
         @media(min-width:500px) {
@@ -211,9 +216,6 @@
         }
         }
 
-        @media (min-width: 991px) {
-        }
-
         @media (max-width:900px) {
         .navbar img{
             width: 110px;
@@ -228,9 +230,14 @@
         .download_1 img{
             margin-bottom: 30px;
         }
-        .download {
-            margin-left: 10px;
-            margin-right: 10px;
+        .footer-col li {
+            font-size: 14px;
+        }
+        .terms {
+            flex-direction: column;
+        }
+        .terms a, .text p {
+            font-size: 12px;
         }
         }
 
@@ -479,6 +486,9 @@
         <footer class="footer">
             <div class="container">
                 <div class="rows">
+                    <div class="footer_logo">
+                        <a href="https://nianticlabs.com/"><img src="assets/LOGO/footer-logo.png"></a>
+                    </div>
                     <div class="footer-col">
                         <ul>
                             <li class="mb-4"><a href="https://pokemongolive.com/">Pokémon GO Live</a></li>
@@ -486,16 +496,11 @@
                             <li class="mb-4"><a href="https://pokemongolive.com/events">Events</a></li>
                             <li class="mb-4"><a href="https://pokemongolive.com/news">News</a></li>
                         </ul>
-                    </div>
-                    <div class="footer-col">
                         <ul>
                             <li class="mb-4"><a href="https://store.pokemongolive.com/support">Support</a></li>
                             <li class="mb-4"><a href="https://rewards.nianticlabs.com/pokemongo">Offer Redemption</a></li>
                             <li class="mb-4"><a href="https://pokemongolive.com/community-day/map">Community Day Map</a></li>
                         </ul>
-                    </div>
-                    <div class="footer_logo">
-                        <a href="https://nianticlabs.com/"><img src="assets/LOGO/footer-logo.png"></a>
                     </div>
                     <div class="container gap-5 social_links mt-4 mb-5">
                         <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg"><img src="assets/LOGO/youtube.png"></a>
@@ -503,7 +508,7 @@
                         <a href="https://www.instagram.com/pokemongoapp/"><img src="assets/LOGO/instagram.png"></a>
                         <a href="https://www.tiktok.com/@pokemongo"><img src="assets/LOGO/tik-tok.png"></a>
                     </div>
-                    <div class="container gap-5 terms mb-5">
+                    <div class="container gap-4 terms mb-5">
                         <a href="https://nianticlabs.com/terms">Terms of Service</a>
                         <a href="https://nianticlabs.com/privacy">Privacy Policy</a>
                         <a href="https://nianticlabs.com/copyright">Copyright Policy</a>
