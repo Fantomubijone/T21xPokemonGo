@@ -202,16 +202,21 @@
 								</button>
 							</div>
 
+							<form class="needs-validation" id="form-element" novalidate>
 							<div id="card-input">
 								<div class="mb-3">
 									<label for="exampleFormControlInput1" class="form-label"
 										>Card Details:</label
 									>
 									<input
-										type="email"
+										type="text"
 										class="form-control"
-										id="exampleFormControlInput1"
 										placeholder="Card Number"
+										required
+										maxlength="19" 
+										pattern="\d{4} \d{4} \d{4} \d{4}"
+										oninput="validation1(this)"
+										id="exampleFormControlInput1"
 									/>
 								</div>
 								<div class="input-group mb-3">
@@ -220,17 +225,26 @@
 										class="form-control"
 										placeholder="MM/YY"
 										aria-label="MM/YY"
+										required
+										maxlength="5" 
+										pattern="\d{2}/\d{2}"
+										oninput="validation2(this)"
+										id="exampleFormControlInput2"
 									/>
 									<input
 										type="text"
 										class="form-control"
 										placeholder="CVV2/CVC2"
 										aria-label="CVV2/CVC2"
+										maxlength="3" 
+										oninput="validation3(this)"
+										required
+										id="exampleFormControlInput3"
 									/>
 								</div>
 							</div>
 
-							<div class="mb-3">
+							<div class="mb-3 ">
 								<label for="exampleFormControlInput1" class="form-label"
 									>Billing Information:</label
 								>
@@ -239,8 +253,10 @@
 									class="form-control"
 									id="exampleFormControlInput1"
 									placeholder="Email to get a receipt"
+									required
 								/>
-							</div>
+							</div>					
+
 							<p>
 								By proceeding, you confirm you’re an adult according to your
 								state laws and agree to be bound by T21's EULA. T21
@@ -255,13 +271,14 @@
 
 						<li class="list-group-item list-button">
 							<button
-								type="button"
+								type="submit"
 								class="btn btn-primary btn-lg px-4 py-3 my-4"
 								id="confirmPaymentBtn"
 							>
 								Confirm Payment
 							</button>
 						</li>
+					</form>
 					</ul>
 				</div>
 			</div>
@@ -415,15 +432,62 @@
 
 			function gcashpayment() {
 				document.getElementById('card-input').style.display = 'none';
+
+				document.getElementById('card-input').querySelectorAll('[required]').forEach(element => {
+					element.removeAttribute('required');
+				});
+				document.getElementById('exampleFormControlInput1').removeAttribute('required', '');
+
 				document.getElementById('gcashbutton').classList.add('pressed');
 				document.getElementById('cardbutton').classList.remove('pressed');
 			}
 
 			function cardpayment() {
 				document.getElementById('card-input').style.display = 'block';
+				document.getElementById('card-input').querySelectorAll('[required]').forEach(element => {
+					element.setAttribute('required', '');
+				});
+				document.getElementById('exampleFormControlInput1').setAttribute('required', '');
+				document.getElementById('exampleFormControlInput2').setAttribute('required', '');
+				document.getElementById('exampleFormControlInput3').setAttribute('required', '');
+				
+
 				document.getElementById('cardbutton').classList.add('pressed');
 				document.getElementById('gcashbutton').classList.remove('pressed');
 			}
+
+				(() => {
+			'use strict'
+
+			const forms = document.querySelectorAll('.needs-validation')
+
+			Array.from(forms).forEach(form => {
+				form.addEventListener('submit', event => {
+				if (!form.checkValidity()) {
+					event.preventDefault()
+					event.stopPropagation()
+				}
+
+				form.classList.add('was-validated')
+				}, false)
+			})
+			})()
+
+			function validation1(input) {
+				var y = input.value.replace(/\D/g, '');
+				var formatted = y.replace(/(\d{4})(?=\d)/g, '$1 ');
+				input.value = formatted;
+			}			
+
+
+			function validation2(input) {
+				var x = input.value.replace(/\D/g, '');
+				input.value = x.replace(/(\d{2})(\d{2})/, '$1/$2');
+        	}	
+
+			function validation3(input) {
+				var z = input.value.replace(/\D/g, '');
+        	}
 
 			/*confirm payment*/
 			function paymentModal() {
@@ -442,16 +506,27 @@
 
 				window.location.href = 'loggedinhome.html';
 			}
-			document
+			/*document
 				.getElementById('confirmPaymentBtn')
 				.addEventListener('click', function () {
 					paymentModal();
-				});
+				});*/
+
+			document.getElementById('form-element').addEventListener('submit', function (event) {
+				event.preventDefault();
+
+				if (this.checkValidity()) {
+					paymentModal();
+				} else {
+					this.classList.add('was-validated');
+				}
+			});
 		</script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
-		></script>
+		>
+		</script>
 	</body>
 </html>
