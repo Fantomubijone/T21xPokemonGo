@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Page</title>
+		<link
+			rel="shortcut icon"
+			href="https://storage.googleapis.com/platform-webstore-rel-assets/pgo/site_assets/favicon.ico"
+		/>
+		<link rel="stylesheet" href="css/styleslog.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="logo">
+				<a href="index.html">
+					<img src="assets/LOGO/T21_Login.png" alt="Pokemon Go Logo" />
+				</a>
+			</div>
+			<div class="login-container">
+				<h3>Sign in with your Pokemon Go account</h3>
+				<form id="login-form">
+					<input
+						type="text"
+						id="username"
+						name="username"
+						placeholder="Username"
+						required
+					/>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="Password"
+						required
+					/>
+					<button
+						type="button"
+						class="login-btn niantic"
+						onclick="validateForm()"
+					>
+						Login with Niantic Kids
+					</button>
+				</form>
+				<p>Or sign up with:</p>
+				<button class="login-btn apple" onclick="signInWithApple()">
+					Sign in with Apple
+				</button>
+				<button class="login-btn facebook" onclick="signInWithFacebook()">
+					Sign in with Facebook
+				</button>
+				<button class="login-btn google" onclick="signInWithGoogle()">
+					Sign in with Google
+				</button>
+				<p>
+					If you don't have a Pokemon Go Account,
+					<a href="signup.html">Make one today!</a>
+				</p>
+			</div>
+
+			<footer class="footer">
+				<div class="footer-content">
+					<p class="disclaimer">Disclaimer:</p>
+					<p class="disclaimer-text">
+						Images used are copyrighted by Niantic.<br />
+						This project is for educational purposes only and no copyright
+						infringement is intended.
+					</p>
+				</div>
+			</footer>
+		</div>
+		<script src="javascript/script.js"></script>
+
+		<script>
+			function validateForm() {
+				var username = document.getElementById('username').value;
+				var password = document.getElementById('password').value;
+
+				if (
+					username === 'SmoothOperator' &&
+					password === 'NoAppendixNoProblem'
+				) {
+					localStorage.setItem('ignsave', 'SmoothOperator');
+					localStorage.setItem(
+						'emailsave',
+						'carlos.decastro@scuderiaferrari.com'
+					);
+
+					window.location.href = 'loggedinhome.html';
+					alert('Successfully logged in!');
+				} else {
+					alert('Incorrect username or password! Please try again.');
+				}
+			}
+
+			function signInWithApple() {
+				localStorage.setItem('ignsave', 'SmoothOperator');
+				localStorage.setItem(
+					'emailsave',
+					'carlos.decastro@scuderiaferrari.com'
+				);
+
+				window.location.href = 'loggedinhome.html';
+				alert('Successfully logged in!');
+			}
+
+			function signInWithFacebook() {
+				localStorage.setItem('ignsave', 'SmoothOperator');
+				localStorage.setItem(
+					'emailsave',
+					'carlos.decastro@scuderiaferrari.com'
+				);
+
+				window.location.href = 'loggedinhome.html';
+				alert('Successfully logged in!');
+			}
+
+			function signInWithGoogle() {
+				localStorage.setItem('ignsave', 'SmoothOperator');
+				localStorage.setItem(
+					'emailsave',
+					'carlos.decastro@scuderiaferrari.com'
+				);
+
+				window.location.href = 'loggedinhome.html';
+				alert('Successfully logged in!');
+			}
+		</script>
+	</body>
+</html>

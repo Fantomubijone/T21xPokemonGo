@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/transac_styles.css" />
+    <link
+      rel="shortcut icon"
+      href="https://storage.googleapis.com/platform-webstore-rel-assets/pgo/site_assets/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <script src="javascript/script.js"></script>
+    <title>Profile</title>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .header,
+      .navbar {
+        background-color: #ffffff !important;
+      }
+      .header.active {
+        box-shadow: 0px 4px 11px -1px rgba(0, 0, 0, 0.25);
+      }
+      .btn,
+      .navbtn {
+        border-radius: 1000px;
+        border: 0px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+        background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+      }
+      .btn.btn-primary:hover,
+      .navbtn.btn-primary:hover {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+      }
+      .offcanvas-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+      }
+      .offcanvas-body .navbtn {
+        display: block;
+        width: 35%;
+        margin-bottom: 10px;
+        justify-content: center;
+        text-align: center;
+      }
+      .main {
+        margin-top: 150px;
+      }
+      .rows {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .footer {
+        background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+        padding: 50px 0;
+      }
+      .footer-col {
+        width: 20%;
+        display: flex;
+      }
+      .footer-col a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      .footer-col a:hover {
+        text-decoration: underline;
+      }
+      ul {
+        list-style: none;
+      }
+      .footer_logo {
+        position: absolute;
+        right: 0;
+        margin-right: 100px;
+      }
+      .footer_logo img {
+        height: 60.96px;
+        width: 184px;
+      }
+      .social_links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .social_links img {
+        width: 25px;
+        height: 25px;
+      }
+      .terms {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #ffffff;
+      }
+      .terms a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .terms a:hover {
+        text-decoration: underline;
+      }
+      .text {
+        text-align: center;
+      }
+      .text p {
+        color: #ffffff;
+        font-size: 14px;
+      }
+      .zarks {
+        color: #ffffff;
+        border: none;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c40707' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      .btn-close {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c40707'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+        opacity: 1;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      .label {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .label_image,
+      .meter {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .label_image img {
+        width: 23px;
+        height: 23px;
+      }
+      .label_text {
+        align-items: center;
+      }
+      .pokemon {
+        position: absolute;
+        top: clamp(15%, 5%, 50%);
+        left: clamp(5%, 7%, 50%);
+        width: clamp(150px, 20%, 600px);
+        text-align: center;
+      }
+      .pokemon p {
+        font-size: 20px;
+        color: #ffffff;
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      .card {
+        border-radius: 5px !important;
+        border: none;
+      }
+      .box::before,
+      .box::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        top: -5px;
+        left: -5px;
+        border-radius: 5px;
+        background: linear-gradient(
+          45deg,
+          #0099ff,
+          #001aff,
+          #a200ff,
+          #ff0055,
+          #ff0000,
+          #ff0055,
+          #a200ff,
+          #0099ff,
+          #001aff
+        );
+        background-size: 300%;
+        animation: border 12s linear infinite;
+      }
+      .box::after {
+        filter: blur(10px);
+      }
+      .progress-container {
+        width: 300px;
+        margin-left: 1px;
+        margin-right: 6px;
+      }
+      progress {
+        width: 100%;
+      }
+      .meter p {
+        font-size: clamp(8px, 1vw, 18px);
+      }
+
+      @keyframes border {
+        0%,
+        100% {
+          background-position: 0 0;
+        }
+
+        50% {
+          background-position: 300%;
+        }
+      }
+
+      @media (max-width: 390px) {
+        .progress-container {
+          width: 100%;
+        }
+        .meter p {
+          font-size: 10px;
+        }
+        .pokemon {
+          top: 12% !important;
+          left: 30% !important;
+        }
+      }
+
+      @media (max-width: 574px) {
+        .footer-col {
+          width: 100%;
+        }
+        .zarks {
+          margin-right: -100px;
+        }
+        .footer-col {
+          margin-top: 100px;
+        }
+        .navbar-brand {
+          padding-bottom: 0px !important;
+        }
+        .mx-5 {
+          margin-left: 0px !important;
+        }
+        .pokemon {
+          top: clamp(19%, 4%, 50%);
+          left: clamp(32%, 1%, 50%);
+        }
+        .progress-container {
+          width: 100%;
+        }
+        .meter {
+          display: block;
+        }
+        .meter p {
+          font-size: 12px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .footer-col {
+          width: 25%;
+          margin-bottom: 30px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .meter p {
+          font-size: 14px;
+        }
+        .meter {
+          display: block;
+        }
+        .progress-container {
+          width: 100%;
+        }
+        .col-md-4 img {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 995px) {
+        .pokemon {
+          top: 5% !important;
+        }
+      }
+
+      @media (min-width: 590px) and (max-width: 765px) {
+        .pokemon {
+          left: 30% !important;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .navbar img {
+          width: 110px;
+          height: 32px;
+        }
+        .footer-col li {
+          font-size: 14px;
+        }
+        .terms {
+          flex-direction: column;
+        }
+        .terms a,
+        .text p {
+          font-size: 12px;
+        }
+      }
+
+      @media (max-width: 1050px) {
+        .navbar button.btn {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1050px) {
+        .zarks {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1600px) {
+        .footer_logo {
+          margin-right: 450px;
+        }
+        .card {
+          border-radius: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header fixed-top">
+        <nav
+          class="navbar d-flex flex-wrapd-flex flex-wrap navbar bg-body-tertiary mx-5">
+          <div class="container-fluid mx-5">
+            <a class="navbar-brand" href="loggedinhome.html">
+              <img src="assets/LOGO/logo.png" alt="logo.png" />
+              Web Store
+            </a>
+
+            <div class="d-flex flex-wrapd-flex flex-wrap">
+              <button
+                type="button"
+                class="btn btn-primary me-3 px-4 py-3"
+                onclick="window.location.href='loggedinhome.html'">
+                Home
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary me-3 px-4 py-3"
+                onclick="window.location.href='mainstore.html'">
+                Store
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary me-3 px-4 py-3"
+                onclick="window.location.href='profile.html'">
+                Profile
+              </button>
+            </div>
+
+            <!--hamburger icon aka zarks-->
+            <button
+              class="navbar-toggler zarks"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="offcanvas offcanvas-end"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <a class="navbar-brand">
+                  <img src="assets/LOGO/logo.png" alt="logo.png" />
+                  Web Store
+                </a>
+
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <button
+                  type="button"
+                  class="navbtn btn-primary me-3 px-4 py-3"
+                  onclick="window.location.href='loggedinhome.html'">
+                  Home
+                </button>
+                <button
+                  type="button"
+                  class="navbtn btn-primary me-3 px-4 py-3"
+                  onclick="window.location.href='mainstore.html'">
+                  Store
+                </button>
+                <button
+                  type="button"
+                  class="navbtn btn-primary me-3 px-4 py-3"
+                  onclick="window.location.href='profile.html'">
+                  Profile
+                </button>
+              </div>
+            </div>
+          </div>
+          <!--near end of nav-->
+        </nav>
+      </div>
+    </header>
+
+    <!--main-->
+    <div class="main mb-5">
+      <div class="container">
+        <div class="card box mb-3">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <!--background-->
+              <img
+                src="assets/LOGO/background.jpeg"
+                class="img-fluid rounded-start"
+                alt="..." />
+              <div class="pokemon">
+                <img
+                  src="assets/LOGO/bulbasaur.gif"
+                  class="img-fluid rounded-start"
+                  alt="..." />
+                <div class="meter">
+                  <div class="gap-5 meter">
+                    <p class="mt-4">LEVEL 8</p>
+                    <p class="mt-4">2,940/8,000</p>
+                  </div>
+                  <div class="progress-container">
+                    <p><progress value="30" max="100"></progress></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <div class="label">
+                  <div>
+                    <h1 class="card-title" id="ignfill">ign</h1>
+                  </div>
+                </div>
+
+                <div class="label_image">
+                  <img src="assets/POKECOINS/Pokecoins.png" />
+                  <div class="label mb-3">
+                    <h5 class="card-title mx-1" id="coins">0</h5>
+                    <h5 class="card-title">PokéCoins</h5>
+                  </div>
+                </div>
+
+                <div class="label gap-2 mb-1">
+                  <h5 class="card-subtitle mb-1">PLAYER ID:</h5>
+                  <h5 class="card-subtitle mb-1" id="playeridfill">
+                    #### #### ####
+                  </h5>
+                </div>
+                <h5 class="card-subtitle mb-1">TEAM MYSTIC</h5>
+
+                <div class="label gap-2">
+                  <h5 class="card-text mb-1">Email:</h5>
+                  <h5 class="card-text mb-1" id="emailfill">email</h5>
+                </div>
+
+                <div class="label gap-2">
+                  <h5 class="card-text mb-1">Member Since:</h5>
+                  <h5 class="card-text mb-1" id="date">date</h5>
+                </div>
+
+                <button
+                  class="btn btn-danger float-end mb-3 mt-5"
+                  style="width: 100px"
+                  onclick="logout()">
+                  Logout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="container mt-5">Transaction History</h1>
+
+    <div class="transaction-history">
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>Mode of Payment</th>
+          <th>Product</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2024-03-24</td>
+          <td>GCash</td>
+          <td>PokeBalls x20</td>
+          <td>Php 149.00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2024-03-24</td>
+          <td>GCash</td>
+          <td>Egg Incubator x1</td>
+          <td>Php 1169.00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>2024-03-24</td>
+          <td>Paypal</td>
+          <td>Max Revive x10</td>
+          <td>Php 149.00</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>2024-03-24</td>
+          <td>Credit Card</td>
+          <td>Rocket Radar x1</td>
+          <td>Php 149.00</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>2024-03-24</td>
+          <td>Credit Card</td>
+          <td>Star Piece x1</td>
+          <td>Php 149.00</td>
+        </tr>
+      </table>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="rows">
+          <div class="footer-col">
+            <ul>
+              <li class="mb-4">
+                <a href="https://pokemongolive.com/">Pokémon GO Live</a>
+              </li>
+              <li class="mb-4">
+                <a href="https://pokemongolive.com/leaderboard">Leaderboard</a>
+              </li>
+              <li class="mb-4">
+                <a href="https://pokemongolive.com/events">Events</a>
+              </li>
+              <li class="mb-4">
+                <a href="https://pokemongolive.com/news">News</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <ul>
+              <li class="mb-4">
+                <a href="https://store.pokemongolive.com/support">Support</a>
+              </li>
+              <li class="mb-4">
+                <a href="https://rewards.nianticlabs.com/pokemongo"
+                  >Offer Redemption</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="https://pokemongolive.com/community-day/map"
+                  >Community Day Map</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer_logo">
+            <a href="https://nianticlabs.com/"
+              ><img src="assets/LOGO/footer-logo.png"
+            /></a>
+          </div>
+          <div class="container gap-5 social_links mt-4 mb-5">
+            <a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg"
+              ><img src="assets/LOGO/youtube.png"
+            /></a>
+            <a href="https://www.facebook.com/PokemonGO/"
+              ><img src="assets/LOGO/facebook.png"
+            /></a>
+            <a href="https://www.instagram.com/pokemongoapp/"
+              ><img src="assets/LOGO/instagram.png"
+            /></a>
+            <a href="https://www.tiktok.com/@pokemongo"
+              ><img src="assets/LOGO/tik-tok.png"
+            /></a>
+          </div>
+          <div class="container gap-5 terms mb-5">
+            <a href="https://nianticlabs.com/terms">Terms of Service</a>
+            <a href="https://nianticlabs.com/privacy">Privacy Policy</a>
+            <a href="https://nianticlabs.com/copyright">Copyright Policy</a>
+            <a href="https://nianticlabs.com/guidelines">Player Guidelines</a>
+          </div>
+          <div class="container text">
+            <p>
+              Pokémon GO is playable in English, French, German, Italian,
+              Russian, Japanese, Spanish, Traditional Chinese, Korean, Thai,
+              Brazilian Portuguese, Turkish, and Indonesian.
+              <br />
+              ©2023 Niantic, Inc. ©2023 Pokémon. ©1995–2023 Nintendo / Creatures
+              Inc. / GAME FREAK inc. Pokémon and Pokémon character names are
+              trademarks of Nintendo.
+              <br />
+              Apple and the Apple logo are trademarks of Apple Inc., registered
+              in the U.S. and other countries. App Store is a service mark of
+              Apple Inc. Android, Google Play and the Google Play logo are
+              trademarks of Google LLC. During gameplay, please be aware of your
+              surroundings and play safely.
+              <br />
+              All images used are the property of Niantic. This project is for
+              educational purposes only and no copyright infringement is
+              intended.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        if (scrollY > 0) {
+          header.classList.add("active");
+        } else {
+          header.classList.remove("active");
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <script>
+      function logout() {
+        alert("Logging out...");
+        window.location.href = "login.html";
+      }
+
+      function generateMemberSinceDate() {
+        const startDate = new Date("2016-07-06");
+        const endDate = new Date("2024-03-01");
+        const randomDate = new Date(
+          startDate.getTime() +
+            Math.random() * (endDate.getTime() - startDate.getTime())
+        );
+        return randomDate.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+      }
+
+      window.onload = function () {
+        let idplayer = localStorage.getItem("playeridsave");
+
+        if (!idplayer) {
+          idplayer = generatePlayerId();
+          localStorage.setItem("playeridsave", idplayer);
+        }
+
+        document.getElementById("playeridfill").innerText =
+          localStorage.getItem("playeridsave");
+
+        document.getElementById("coins").innerText =
+          localStorage.getItem("pokeCoins");
+        document.getElementById("ignfill").innerText =
+          localStorage.getItem("ignsave");
+
+        document.getElementById("date").innerText = generateMemberSinceDate();
+
+        document.getElementById("emailfill").innerText =
+          localStorage.getItem("emailsave");
+      };
+    </script>
+  </body>
+</html>

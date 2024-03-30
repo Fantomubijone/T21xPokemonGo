@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up Page</title>
+		<link
+		rel="shortcut icon"
+		href="https://storage.googleapis.com/platform-webstore-rel-assets/pgo/site_assets/favicon.ico"
+		/>
+		<link rel="stylesheet" href="css/styleslog.css" />
+		<script src="javascript/script.js"></script>
+		<style>
+			/* Style for the floating div */
+			#floating-div {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: white;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+				z-index: 1000;
+				display: none;
+			}
+
+			/* Style for the blurred background */
+			.blur-background {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+				backdrop-filter: blur(10px);
+				z-index: 999;
+				display: none;
+			}
+			#floating-div {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: #fff;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+				z-index: 1000;
+				display: none;
+				max-width: 400px;
+				width: 90%;
+				text-align: center; /* Center align content */
+			}
+
+			#floating-div h2 {
+				font-size: 1.5rem;
+				margin-bottom: 10px;
+			}
+
+			#floating-div hr {
+				border: none;
+				border-top: 1px solid #ddd;
+				margin: 15px 0;
+			}
+
+			.info-item {
+				margin-bottom: 10px;
+				text-align: left; /* Left align content */
+			}
+
+			.label {
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+
+			.value {
+				margin: 0;
+			}
+
+			#proceed-btn {
+				display: inline-block;
+				width: auto;
+				padding: 10px 20px;
+				margin-top: 20px;
+				background-color: #c40707;
+				color: white;
+				border: none;
+				border-radius: 50px;
+				font-size: 1rem;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+
+			#proceed-btn:hover {
+				background-color: #c40707;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="logo">
+				<a href="index.html">
+					<img src="assets/LOGO/T21_Login.png" alt="Pokemon Go Logo" />
+				</a>
+			</div>
+			<div class="login-container" id="signupcon">
+				<h3>Create your Pokemon Go Account</h3>
+				<form id="signup-form">
+					<!-- Removed PlayerID input -->
+					<input
+						type="text"
+						id="ign"
+						name="ign"
+						placeholder="In-game Name (IGN)"
+						required
+					/>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="E-mail address"
+						required
+					/>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="Password"
+						required
+					/>
+					<input
+						type="password"
+						id="confirmPassword"
+						name="confirmPassword"
+						placeholder="Confirm Password"
+						required
+					/>
+					<button type="submit" class="login-btn niantic">Sign Up</button>
+				</form>
+				<p>Or sign up with:</p>
+				<button class="login-btn apple">Sign up with Apple</button>
+				<button class="login-btn facebook">Sign up with Facebook</button>
+				<button class="login-btn google">Sign up with Google</button>
+				<p>Already have an account? <a href="login.html">Sign in here</a></p>
+			</div>
+
+			<footer class="footer">
+				<div class="footer-content">
+					<p class="disclaimer">Disclaimer:</p>
+					<p class="disclaimer-text">
+						Images used are copyrighted by Niantic.<br />
+						This project is for educational purposes only and no copyright
+						infringement is intended.
+					</p>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Floating div for displaying user info -->
+		<div id="floating-div">
+			<h2>User Information</h2>
+			<hr />
+			<div class="info-item">
+				<p class="label">Player ID:</p>
+				<p id="player-id" class="value"></p>
+			</div>
+			<div class="info-item">
+				<p class="label">In-game Name (IGN):</p>
+				<p id="ignfill" class="value"></p>
+			</div>
+			<div class="info-item">
+				<p class="label">Email Address:</p>
+				<p id="emailfill" class="value"></p>
+			</div>
+			<div class="info-item">
+				<p class="label">Password:</p>
+				<p id="passwordfill" class="value"></p>
+			</div>
+			<button id="proceed-btn" class="login-btn">Continue to Login</button>
+		</div>
+
+		<!-- Blurred background -->
+		<div class="blur-background"></div>
+
+		<script>
+			document
+				.getElementById('proceed-btn')
+				.addEventListener('click', function () {
+					alert('Sucessfully created an Account...');
+					window.location.href = 'loggedinhome.html';
+				});
+
+			document
+				.getElementById('signup-form')
+				.addEventListener('submit', function (event) {
+					var emailInput = document.getElementById('email');
+					var passwordInput = document.getElementById('password');
+					var confirmPasswordInput = document.getElementById('confirmPassword');
+
+					var email = emailInput.value;
+					var password = passwordInput.value;
+					var confirmPassword = confirmPasswordInput.value;
+
+					if (!validateEmail(email)) {
+						alert('Please enter a valid email address');
+						event.preventDefault();
+					} else if (password !== confirmPassword) {
+						alert('Passwords do not match');
+						event.preventDefault();
+					} else {
+						let playerId = generatePlayerId();
+						let ign = document.getElementById('ign').value;
+						showFloatingDiv(playerId, ign, email, password);
+						event.preventDefault();
+					}
+				});
+		</script>
+		<script src="javascript/script.js"></script>
+	</body>
+</html>

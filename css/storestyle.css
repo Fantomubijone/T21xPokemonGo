@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.header,
+.navbar {
+	background-color: #ffffff !important;
+}
+
+.montserrat {
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.card {
+	border-radius: 15px;
+	box-shadow: 0px 3px 13px -3px rgba(0, 0, 0, 0.2);
+	border-color: rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+	box-shadow: 0px 15px 50px 1px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease-in-out;
+}
+
+#EggIncSuper {
+	width: 50%;
+	height: 200px;
+	display: flex;
+	margin: 20px auto;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+
+#pokeball_20,
+#pokeball_100,
+#pokeball_200,
+#MaxRev_6,
+#MaxPotion,
+#Incense1,
+#TM,
+#IPCS,
+#PSU,
+#Incense8,
+#luckyegg1,
+#Incense8,
+#luckyegg8,
+#luremod,
+#luremod_8,
+#magneticmod,
+#maxpotion10,
+#mossymod,
+#poff,
+#PBP1,
+#PBP3,
+#rainymod,
+#RRP1,
+#RRP3,
+#RR,
+#SP1,
+#SP8,
+#C1,
+#C2,
+#C3,
+#C4,
+#C5,
+#C6 {
+	width: 50%;
+	height: auto;
+	display: flex;
+	margin: 50px auto;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+
+#ISU {
+	width: 50%;
+	height: auto;
+	display: flex;
+	margin: 40px auto;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+#EggIncubator {
+	width: 50%;
+	height: auto;
+	display: flex;
+	margin: 10px auto;
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+
+.Divider {
+	position: absolute;
+	left: 34rem;
+}
+
+.card {
+	border-radius: 100px;
+	padding: 15px;
+}
+
+.card-img-top-centered {
+	margin: 0 auto;
+	display: block;
+}
+
+.container mb-4 mt-5 h1 {
+	margin-top: 400px;
+}
+
+.container {
+	margin-top: 130px;
+}
+
+.card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-body .btn {
+	margin-top: auto; /* Align the button to the bottom of the card body */
+}
+
+/*header and footer + buttons and some card styles*/
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+.header,
+.navbar {
+	background-color: #ffffff !important;
+}
+.header.active {
+	box-shadow: 0px 4px 11px -1px rgba(0, 0, 0, 0.25);
+}
+.btn,
+.navbtn {
+	border-radius: 1000px;
+	border: 0px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+	background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+}
+.btn.btn-primary:hover,
+.navbtn.btn-primary:hover {
+	background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.3),
+			rgba(0, 0, 0, 0.3)
+		),
+		linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+}
+.offcanvas-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+.offcanvas-body .navbtn {
+	display: block;
+	width: 35%;
+	margin-bottom: 10px;
+	justify-content: center;
+	text-align: center;
+}
+.rows {
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer {
+	background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+	padding: 50px 0;
+	margin-top: 10rem;
+}
+.footer-col {
+	width: 20%;
+	display: flex;
+}
+.footer-col a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 13px;
+}
+.footer-col a:hover {
+	text-decoration: underline;
+}
+ul {
+	list-style: none;
+}
+.footer_logo {
+	position: absolute;
+	right: 0;
+	margin-right: 100px;
+}
+.footer_logo img {
+	height: 60.96px;
+	width: 184px;
+}
+.social_links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.social_links img {
+	width: 25px;
+	height: 25px;
+}
+.terms {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #ffffff;
+}
+.terms a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 14px;
+}
+.terms a:hover {
+	text-decoration: underline;
+}
+.text {
+	text-align: center;
+}
+.text p {
+	color: #ffffff;
+	font-size: 14px;
+}
+.zarks {
+	color: #ffffff;
+	border: none;
+}
+.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c40707' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.btn-close {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c40707'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+	opacity: 1;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+@media(min-width:0px) {
+	.footer .container {
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 425px) {
+	.px-4 {
+		padding-bottom: 1.25rem !important;
+		padding-top: 0.5rem !important;
+	}
+	.py-3 {
+		padding-left: 0.5rem !important;
+		padding-right: 0.5rem !important;
+	}
+}
+
+@media (max-width: 574px) {
+	.footer-col {
+		width: 100%;
+	}
+	.zarks {
+		margin-right: -100px;
+	}
+	.footer-col {
+		margin-top: 100px;
+	}
+	.navbar-brand {
+		padding-bottom: 0px !important;
+	}
+	.mx-5 {
+		margin-left: 0px !important;
+	}
+	.balance-container {
+		flex-direction: column;
+		margin-bottom: 20px;
+	}
+	.footer {
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.card {
+		border-radius: 15px;
+	}
+}
+
+@media (min-width: 768px) {
+	.footer-col {
+		width: 25%;
+		margin-bottom: 30px;
+	}
+	.card {
+		border-radius: 12px;
+	}
+}
+
+@media (max-width: 900px) {
+	.navbar img {
+		width: 110px;
+		height: 32px;
+	}
+	.footer-col li {
+		font-size: 14px;
+	}
+	.terms {
+		flex-direction: column;
+	}
+	.terms a,
+	.text p {
+		font-size: 12px;
+	}
+	.col-4 {
+		width: 50%;
+	}
+	.container-sm.download {
+		width: 93%;
+	}
+}
+
+@media (max-width: 1050px) {
+	.navbar button.btn {
+		display: none;
+	}
+}
+
+@media (min-width: 1050px) {
+	.zarks {
+		display: none;
+	}
+}
+
+@media (min-width: 1600px) {
+	.footer_logo {
+		margin-right: 450px;
+	}
+	.card {
+		border-radius: 15px;
+	}
+}
+
+

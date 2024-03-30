@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.header, .navbar {
+    background-color: #ffffff !important;
+}
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn {
+    border-radius: 1000px;
+    border: 0px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+}
+.btn.btn-primary:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+}
+
+.card:hover{
+    box-shadow: 0px 15px 50px 1px rgba(0, 0, 0, 0.30);
+    transition: all 0.3s ease-in-out;
+}
+
+.red_label {
+    background-color: #c40707;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#bonus_coins {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+
+.footer {
+    background: linear-gradient(319.49deg, #c40707 1.87%, #000000 109.19%);
+    padding: 50px 0;
+}
+
+.footer-col {
+    width: 20%;
+}
+
+.footer-col a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer_logo {
+    position: absolute;
+    right: 0;
+    margin-right: 100px;
+}
+
+.footer_logo img {
+    height: 60.96px;
+    width: 184px;
+}
+
+.social_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social_links img {
+    width: 25px;
+    height: 25px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+.terms a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+.text {
+    text-align: center;
+}
+
+.text p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+
+#pokeball_20{
+    width: 50%;
+    position: relative;
+    left: 5rem;
+}
+
+#pokeball_100{
+    width: 56%;
+    position: relative;
+    left: 5rem;
+}
+
+#pokeball_200{
+    width: 50%;
+    position: relative;
+    left: 5rem;
+}
+
+#EggIncubator{
+    width: 35%;
+    position: relative;
+    left: 6rem;
+}
+
+#EggIncSuper{
+    width: 35%;
+    position: relative;
+    left: 6rem;
+}
+
+#MaxRev_6{
+    width: 88%;
+    position: relative;
+    left: 1rem;
+}
+
+#MaxPotion{
+    width: 60%;
+    position: relative;
+    left: 4rem;
+}
+
+#Incense1{
+    width: 69%;
+    position: relative;
+    left: 2rem;
+}
+
+#Incense8{
+    width: 69%;
+    position: relative;
+    left: 3rem;
+}
+
+#luckyegg1{
+    width: 57%;
+    position: relative;
+    left: 4rem;
+}
+
+#Incense8{
+    width: 69%;
+    position: relative;
+    left: 3.5rem;
+}
+
+#luckyegg8{
+    width: 67%;
+    position: relative;
+    left: 4rem;
+}
+
+#luremod{
+    width: 76%;
+    position: relative;
+    left: 2rem;
+}
+
+#luremod_8{
+    width: 69%;
+    position: relative;
+    left: 4rem;
+}
+
+#magneticmod{
+    width: 93%;
+    position: relative;
+    left: 2rem;
+}
+
+#maxpotion10{
+    width: 65%;
+    position: relative;
+    left: 3rem;
+}
+
+#mossymod{
+    width: 88%;
+    position: relative;
+    left: 1rem;
+}
+
+#poff{
+    width: 80%;
+    position: relative;
+    left: 3rem;
+}
+
+#PBP1{
+    width: 96%;
+    position: relative;
+    left: 1rem;
+}
+
+#PBP3{
+    width: 89%;
+    position: relative;
+    left: 2rem;
+}
+
+#rainymod{
+    width: 92%;
+    position: relative;
+    left: 1rem;
+}
+
+#RRP1{
+    width: 90%;
+    position: relative;
+    left: 1rem;
+}
+
+#RRP3{
+    width: 90%;
+    height: 11.6rem;
+    position: relative;
+    left: 1rem;
+}
+
+#RR{
+    width: 11.3rem;
+    position: relative;
+    left: 4rem;
+}
+
+#SP1{
+    width: 70%;
+    height: 11.5rem;
+    position: relative;
+    left: 3.4rem;
+}
+
+#SP8{
+    width: 80%;
+    position: relative;
+    left: 2rem;
+}
+
+
+@media (max-width: 767px) {
+    .footer-col {
+        width: 25%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .footer_logo {
+        margin-right: 350px;
+    }
+    .promotion_image {
+        height: 1080px;
+    }
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="shortcut icon"
+			href="https://storage.googleapis.com/platform-webstore-rel-assets/pgo/site_assets/favicon.ico"
+		/>
+		<link rel="stylesheet" href="css/cart.css" />
+		<title>Payment</title>
+		<style>
+			:root {
+				--bs-body-bg: rgba(0, 0, 0, 0);
+				--bs-border-color: rgba(0, 0, 0, 0.25);
+				--bs-border-radius: 15px;
+			}
+			.card.first {
+				text-align: end;
+			}
+			.btns {
+				border-radius: 10px;
+				width: 80px;
+				height: 80px;
+				border-color: #c40707;
+				color: #c40707;
+				font-weight: 500;
+				font-size: 14px;
+				background: #ffffff;
+			}
+			.btns.pressed {
+				background: #c40707;
+				color: #ffffff;
+			}
+			.list-image,
+			.list-button {
+				display: flex;
+				justify-content: center;
+			}
+			.first {
+				background-image: linear-gradient(135deg, #fceeee, #fcdede);
+			}
+			.modal-content {
+				background-color: #ffffff !important;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header fixed-top">
+				<nav
+					class="navbar d-flex flex-wrapd-flex flex-wrap navbar bg-body-tertiary mx-5"
+				>
+					<div class="container-fluid mx-5">
+						<a class="navbar-brand" href="loggedinhome.html">
+							<img src="assets/LOGO/logo.png" alt="logo.png" />
+							Web Store
+						</a>
+
+						<div class="d-flex flex-wrapd-flex flex-wrap">
+							<button
+								type="button"
+								class="btn btn-primary me-3 px-4 py-3"
+								onclick="window.location.href='loggedinhome.html'"
+							>
+								Home
+							</button>
+							<button
+								type="button"
+								class="btn btn-primary me-3 px-4 py-3"
+								onclick="window.location.href='mainstore.html'"
+							>
+								Store
+							</button>
+							<button
+								type="button"
+								class="btn btn-primary me-3 px-4 py-3"
+								onclick="window.location.href='profile.html'"
+							>
+								Profile
+							</button>
+						</div>
+
+						<!--hamburger icon aka zarks-->
+						<button
+							class="navbar-toggler zarks"
+							type="button"
+							data-bs-toggle="offcanvas"
+							data-bs-target="#offcanvasNavbar"
+							aria-controls="offcanvasNavbar"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div
+							class="offcanvas offcanvas-end"
+							tabindex="-1"
+							id="offcanvasNavbar"
+							aria-labelledby="offcanvasNavbarLabel"
+						>
+							<div class="offcanvas-header">
+								<a class="navbar-brand">
+									<img src="assets/LOGO/logo.png" alt="logo.png" />
+									Web Store
+								</a>
+
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="offcanvas"
+									aria-label="Close"
+								></button>
+							</div>
+							<div class="offcanvas-body">
+								<button
+									type="button"
+									class="navbtn btn-primary me-3 px-4 py-3"
+									onclick="window.location.href='loggedinhome.html'"
+								>
+									Home
+								</button>
+								<button
+									type="button"
+									class="navbtn btn-primary me-3 px-4 py-3"
+									onclick="window.location.href='mainstore.html'"
+								>
+									Store
+								</button>
+								<button
+									type="button"
+									class="navbtn btn-primary me-3 px-4 py-3"
+									onclick="window.location.href='profile.html'"
+								>
+									Profile
+								</button>
+							</div>
+						</div>
+					</div>
+					<!--near end of nav-->
+				</nav>
+			</div>
+		</header>
+
+		<div class="container main">
+			<h1 class="container mb-5 title">Checkout</h1>
+
+			<div class="items gap-5">
+				<div class="card first" style="width: 35rem">
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">
+							<div class="list-image my-5">
+								<img src="assets/POKECOINS/Item_COIN_BUCKET_01.png" />
+							</div>
+							1x 2,700 PokéCoins ₱589.00
+						</li>
+						<li class="list-group-item">
+							<div class="list-image my-5">
+								<img src="assets/POKECOINS/Item_COIN_HEAP_01.png" />
+							</div>
+							1x 14,500 PokéCoins ₱2950.00
+						</li>
+						<li class="list-group-item">
+							<div class="list-image my-5">
+								<img src="assets/BOXES/box_1.png" />
+							</div>
+							1x Event Premium Box ₱350.00
+						</li>
+						<li class="list-group-item my-3">
+							<h3>Total: ₱3,889.00</h3>
+						</li>
+					</ul>
+				</div>
+
+				<div class="card" style="width: 35rem">
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item mt-3">
+							<h3>Payment Method:</h3>
+						</li>
+						<li class="list-group-item">
+							<div class="list-button gap-4 mt-2 mb-4">
+								<button
+									type="button"
+									id="gcashbutton"
+									class="btns default-button"
+									onclick="method('gcashpayment')"
+								>
+									Gcash
+								</button>
+								<button
+									type="button"
+									id="cardbutton"
+									class="btns"
+									onclick="method('cardpayment')"
+								>
+									Card
+								</button>
+							</div>
+
+							<div id="card-input">
+								<div class="mb-3">
+									<label for="exampleFormControlInput1" class="form-label"
+										>Card Details:</label
+									>
+									<input
+										type="email"
+										class="form-control"
+										id="exampleFormControlInput1"
+										placeholder="Card Number"
+									/>
+								</div>
+								<div class="input-group mb-3">
+									<input
+										type="text"
+										class="form-control"
+										placeholder="MM/YY"
+										aria-label="MM/YY"
+									/>
+									<input
+										type="text"
+										class="form-control"
+										placeholder="CVV2/CVC2"
+										aria-label="CVV2/CVC2"
+									/>
+								</div>
+							</div>
+
+							<div class="mb-3">
+								<label for="exampleFormControlInput1" class="form-label"
+									>Billing Information:</label
+								>
+								<input
+									type="email"
+									class="form-control"
+									id="exampleFormControlInput1"
+									placeholder="Email to get a receipt"
+								/>
+							</div>
+							<p>
+								By proceeding, you confirm you’re an adult according to your
+								state laws and agree to be bound by T21's EULA. T21
+								independently collects essential cookies on this page and
+								further while processing the purchase which is covered by T21's
+								Cookie Policy. Please note that for this purchase, T21 is the
+								authorized merchant of record and controller of the data you
+								submit on this page. If you have any questions, please reach out
+								to T21 Gamer Support.
+							</p>
+						</li>
+
+						<li class="list-group-item list-button">
+							<button
+								type="button"
+								class="btn btn-primary btn-lg px-4 py-3 my-4"
+								id="confirmPaymentBtn"
+							>
+								Confirm Payment
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div
+				class="modal fade"
+				id="paymentModal"
+				aria-labelledby="paymentModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="paymentModalLabel">
+								Payment Successful
+							</h5>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+								onclick="redirectHome()"
+							></button>
+						</div>
+						<div class="modal-body">
+							Your payment has been successfully processed.
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-primary"
+								onclick="redirectHome()"
+							>
+								OK
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--footer section-->
+		<footer class="footer">
+			<div class="container">
+				<div class="rows">
+					<div class="footer_logo">
+						<a href="https://nianticlabs.com/"
+							><img src="assets/LOGO/footer-logo.png"
+						/></a>
+					</div>
+					<div class="footer-col">
+						<ul>
+							<li class="mb-4">
+								<a href="https://pokemongolive.com/">Pokémon GO Live</a>
+							</li>
+							<li class="mb-4">
+								<a href="https://pokemongolive.com/leaderboard">Leaderboard</a>
+							</li>
+							<li class="mb-4">
+								<a href="https://pokemongolive.com/events">Events</a>
+							</li>
+							<li class="mb-4">
+								<a href="https://pokemongolive.com/news">News</a>
+							</li>
+						</ul>
+						<ul>
+							<li class="mb-4">
+								<a href="https://store.pokemongolive.com/support">Support</a>
+							</li>
+							<li class="mb-4">
+								<a href="https://rewards.nianticlabs.com/pokemongo"
+									>Offer Redemption</a
+								>
+							</li>
+							<li class="mb-4">
+								<a href="https://pokemongolive.com/community-day/map"
+									>Community Day Map</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="container gap-5 social_links mt-4 mb-5">
+						<a href="https://www.youtube.com/channel/UCA698bls2pjQyiqP9N-iaeg"
+							><img src="assets/LOGO/youtube.png"
+						/></a>
+						<a href="https://www.facebook.com/PokemonGO/"
+							><img src="assets/LOGO/facebook.png"
+						/></a>
+						<a href="https://www.instagram.com/pokemongoapp/"
+							><img src="assets/LOGO/instagram.png"
+						/></a>
+						<a href="https://www.tiktok.com/@pokemongo"
+							><img src="assets/LOGO/tik-tok.png"
+						/></a>
+					</div>
+					<div class="container gap-4 terms mb-5">
+						<a href="https://nianticlabs.com/terms">Terms of Service</a>
+						<a href="https://nianticlabs.com/privacy">Privacy Policy</a>
+						<a href="https://nianticlabs.com/copyright">Copyright Policy</a>
+						<a href="https://nianticlabs.com/guidelines">Player Guidelines</a>
+					</div>
+					<div class="container text">
+						<p>
+							Pokémon GO is playable in English, French, German, Italian,
+							Russian, Japanese, Spanish, Traditional Chinese, Korean, Thai,
+							Brazillian<br />
+							Portuguese, Turkish, and Indonesian.
+						</p>
+						<p>
+							©2023 Niantic, Inc. ©2023 Pokémon. ©1995–2023 Nintendo / Creatures
+							Inc. / GAME FREAK inc. Pokémon and Pokémon character<br />
+							names are trademarks of Nintendo. Apple and the Apple logo are
+							trademarks of Apple Inc., registered in the U.S. and other
+							countries. App<br />
+							Store is a service mark of Apple Inc. Android, Google Play and the
+							Google Play logo are trademarks of Google LLC. During gameplay,
+							please<br />
+							be aware of your surroundings and play safely.
+						</p>
+						<p>
+							All images used on this website belong to NIANTIC and their
+							rightful owners. for educational purposes only. no copyright
+							infringement is intended.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			window.addEventListener('scroll', function () {
+				const header = document.querySelector('.header');
+				if (scrollY > 0) {
+					header.classList.add('active');
+				} else {
+					header.classList.remove('active');
+				}
+			});
+
+			window.onload = function () {
+				gcashpayment();
+			};
+
+			function method(type) {
+				if (type === 'gcashpayment') {
+					gcashpayment();
+				} else if (type === 'cardpayment') {
+					cardpayment();
+				}
+			}
+
+			function gcashpayment() {
+				document.getElementById('card-input').style.display = 'none';
+				document.getElementById('gcashbutton').classList.add('pressed');
+				document.getElementById('cardbutton').classList.remove('pressed');
+			}
+
+			function cardpayment() {
+				document.getElementById('card-input').style.display = 'block';
+				document.getElementById('cardbutton').classList.add('pressed');
+				document.getElementById('gcashbutton').classList.remove('pressed');
+			}
+
+			/*confirm payment*/
+			function paymentModal() {
+				var paymentModal = new bootstrap.Modal(
+					document.getElementById('paymentModal')
+				);
+				paymentModal.show();
+			}
+			function redirectHome() {
+				let pokecoins = localStorage.getItem('pokeCoins');
+				pokecoins = parseInt(pokecoins) + 17300;
+				localStorage.setItem('pokeCoins', pokecoins);
+				alert(
+					`17300 Pokecoins has been added to your account\nNew Balance: ${pokecoins}`
+				);
+
+				window.location.href = 'loggedinhome.html';
+			}
+			document
+				.getElementById('confirmPaymentBtn')
+				.addEventListener('click', function () {
+					paymentModal();
+				});
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
